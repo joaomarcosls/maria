@@ -1,0 +1,24 @@
+{
+    "nome": "maria",
+    "acoes": [
+        {
+            "nome": "aumentar",
+            "objetos": [
+                "volume"
+            ]
+        },
+        {
+            "nome": "deixar",
+            "objetos": [
+                "mudo"
+            ]
+        },
+        {
+            "nome": "abrir",
+            "objetos": [
+                "programa"
+               
+            ]
+        }
+    ]
+}
