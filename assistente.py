@@ -1,6 +1,7 @@
 import speech_recognition as sr
 from nltk import word_tokenize, corpus
 import json
+import pyautogui
 
 IDIOMA_CORPUS = "portuguese"
 IDIOMA_FALA = "pt-BR"
@@ -90,6 +91,8 @@ def validar_comando(acao, objeto):
 
 
 def executar_comando(acao, objeto):
+    if acao=="aumentar":
+      pyautogui.hotkey("volumeup")
     print("vou executar o comando:", acao, objeto)
 
 if __name__ == '__main__':
