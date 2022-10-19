@@ -91,9 +91,16 @@ def validar_comando(acao, objeto):
 
 
 def executar_comando(acao, objeto):
-    if acao=="aumentar":
-      pyautogui.hotkey("volumeup")
+   
     print("vou executar o comando:", acao, objeto)
+    
+    if acao == "aumentar":
+      pyautogui.hotkey("volumeup")
+      if acao == "mudo":
+        for 
+         pyautogui.hotkey("volumemute")
+      
+  
 
 if __name__ == '__main__':
     iniciar()
