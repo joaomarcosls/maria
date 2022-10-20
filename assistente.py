@@ -95,10 +95,13 @@ def executar_comando(acao, objeto):
     print("vou executar o comando:", acao, objeto)
     
     if acao == "aumentar":
-      pyautogui.hotkey("volumeup")
-      if acao == "mudo":
-        for 
-         pyautogui.hotkey("volumemute")
+     pyautogui.hotkey("volumeup")
+    
+    if objeto == "mudo":
+     pyautogui.hotkey("volumemute")
+      
+    if objeto == "e-mail":
+     pyautogui.hotkey("browserhome")
       
   
 
