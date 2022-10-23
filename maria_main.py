@@ -95,10 +95,10 @@ def executar_comando(acao, objeto):
     print("vou executar o comando:", acao, objeto)
     
     if acao == "aumentar":
-     pyautogui.hotkey("volumeup")
+     pyautogui.hotkey("volumeup")#aumenta o volume 
     
     if objeto == "mudo":
-     pyautogui.hotkey("volumemute")
+     pyautogui.hotkey("volumemute") #deixa o som mudo 
       
     if objeto == "e-mail":
      pyautogui.press('win') #Pressiona a tecla Iniciar do Windows
