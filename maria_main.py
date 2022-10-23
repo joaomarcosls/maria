@@ -34,7 +34,7 @@ def escutar_comando():
     with sr.Microphone() as fonte_audio:
         reconhecedor.adjust_for_ambient_noise(fonte_audio)
         
-        print("Fale alguma coisa...")        
+        print("Olá sou Maria me informe oque deseja...")        
         fala = reconhecedor.listen(fonte_audio, timeout=5, phrase_time_limit=5)
         try:
             comando = reconhecedor.recognize_google(fala, language=IDIOMA_FALA)
@@ -101,7 +101,10 @@ def executar_comando(acao, objeto):
      pyautogui.hotkey("volumemute")
       
     if objeto == "e-mail":
-     pyautogui.hotkey("browserhome")
+     pyautogui.press('win') #Pressiona a tecla Iniciar do Windows
+     pyautogui.typewrite('e-mail') #Digita o texto no local atual do cursor
+     pyautogui.press('enter') #Pressiona a tecla [ENTER]
+     pyautogui.press('enter') #Pressiona a tecla [ENTER]
       
   
 
@@ -112,7 +115,7 @@ if __name__ == '__main__':
     while continuar:
         try:
             comando = escutar_comando()
-            print(f"processando o comando: {comando}")
+            print(f"Vou executar: {comando}")
 
             if comando:
                 acao, objeto = tokenizar_comando(comando)
@@ -120,7 +123,7 @@ if __name__ == '__main__':
                 if valido:
                     executar_comando(acao, objeto)
                 else:
-                    print("Não entendi o comando. Repita, por favor!")
+                    print("Não entendi. Pode repetir!")
         except KeyboardInterrupt:
             print("Tchau!")
 
