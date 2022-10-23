@@ -35,7 +35,7 @@ def escutar_comando():
         reconhecedor.adjust_for_ambient_noise(fonte_audio)
         
         print("Olá sou Maria me informe oque deseja...")        
-        fala = reconhecedor.listen(fonte_audio, timeout=5, phrase_time_limit=5)
+        fala = reconhecedor.listen(fonte_audio, timeout=5, phrase_time_limit=20)
         try:
             comando = reconhecedor.recognize_google(fala, language=IDIOMA_FALA)
         except sr.UnknownValueError:
@@ -102,7 +102,7 @@ def executar_comando(acao, objeto):
       
     if objeto == "e-mail":
      pyautogui.press('win') #Pressiona a tecla Iniciar do Windows
-     pyautogui.typewrite('e-mail') #Digita o texto no local atual do cursor
+     pyautogui.typewrite('e-mail',) #Digita o texto no local atual do cursor
      pyautogui.press('enter') #Pressiona a tecla [ENTER]
      pyautogui.press('enter') #Pressiona a tecla [ENTER]
       
